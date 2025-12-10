@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library|book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <h1>📚 سترى النور</h1>
+        <p>موقع لعرض مجموعة من الكتب </p>
+    </header>
+
+    <nav>
+        <a href="#home" class="active">الرئيسية</a>
+        <a href="#books">الكتب</a>
+        <a href="#categories">التصنيفات</a>
+        <a href="#about">عن المكتبة</a>
+    </nav>
+
+    
+    <main>
+        
+        <section class="search-section">
+            <h2>ابحث عن كتاب</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="اكتب اسم الكتاب أو 
+المؤلف...">
+                <button onclick="searchBooks()">بحث</button>
+                <button onclick="resetSearch()">مسح</button>
+            </div>
+            <p id="searchResult"></p>
+        </section>
+
+     
+        <section class="books-section" id="books">
+            <h2>مجموعة الكتب</h2>
+            
+            <div class="books-container">
+           
+                <div class="book" data-category="روايات">
+                    <img src="  " alt="كتاب">
+                    <h3>واختفى كل شيء</h3>
+                    <p><strong>المؤلف:</strong> أجاثا كريستي</p>
+                    <p><strong>التصنيف:</strong> روايات</p>
+                    <button onclick="showDetails('كتاب 1')">عرض التفاصيل</button>
+                </div>
+
+                
+                <div class="book" data-category="روايات">
+                    <img src="  " alt="كتاب">
+                    <h3>ثلاثية غرناطة</h3>
+                    <p><strong>المؤلف:</strong> رضوى عاشور</p>
+                    <p><strong>التصنيف:</strong> روايات</p>
+                    <button onclick="showDetails('كتاب 2')">عرض التفاصيل</button>
+                </div>
+
+                
+                <div class="book" data-category="تنمية">
+                    <img src="  "  alt="كتاب">
+                    <h3>عقدك النفسية سجنك الأبدي</h3>
+                    <p><strong>المؤلف:</strong> يوسف الحسني</p>
+                    <p><strong>التصنيف:</strong> تنمية بشرية</p>
+                    <button onclick="showDetails('كتاب 3')">عرض التفاصيل</button>
+                </div>
+
+               
+                <div class="book" data-category="تنمية">
+                    <img src="  " alt="كتاب">
+                    <h3>متعة أن تكون في العشرين</h3>
+                    <p><strong>المؤلف:</strong> علا ديوب</p>
+                    <p><strong>التصنيف:</strong> تنمية بشرية</p>
+                    <button onclick="showDetails('كتاب 4')">عرض التفاصيل</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <h2>التصنيفات</h2>
+            <div class="categories">
+                <button class="category-btn" onclick="filterBooks('all')">جميع 
+الكتب</button>
+                <button class="category-btn" onclick="filterBooks('
+روايات')">روايات</button>
+                <button class="category-btn" onclick="filterBooks('تنمية')">تنمية 
+بشرية</button>
+                <button class="category-btn" onclick="filterBooks('
+أدب')">أدب</button>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p> مكتبة سترى النور</p>
+     
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

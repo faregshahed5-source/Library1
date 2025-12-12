@@ -3,103 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>library|book</title>
+    <title>Library  | books</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     
     <header>
-        <h1>📚 سترى النور</h1>
-        <p>موقع لعرض مجموعة من الكتب </p>
+        <h1>📚  سترى النور</h1>
+        <p>كل كتاب هنا هو نور</p>
     </header>
 
     <nav>
-        <a href="#home" class="active">الرئيسية</a>
+        <a href="#home">الرئيسية</a>
         <a href="#books">الكتب</a>
-        <a href="#categories">التصنيفات</a>
-        <a href="#about">عن المكتبة</a>
+        <a href="#categories">الأقسام</a>
+        <a href="#about" onclick="showAboutLibrary() ; return false;">عن المكتبة</a>
+        <button onclick="showMyFavorites()" class="nav-btn"> المفضلة</button>
     </nav>
 
-    
     <main>
-        
         <section class="search-section">
-            <h2>ابحث عن كتاب</h2>
+            <h2>البحث عن كتاب</h2>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="اكتب اسم الكتاب أو 
-المؤلف...">
+                <input type="text" id="searchInput" placeholder="اكتب اسم الكتاب أو المؤلف...">
                 <button onclick="searchBooks()">بحث</button>
                 <button onclick="resetSearch()">مسح</button>
             </div>
             <p id="searchResult"></p>
         </section>
 
-     
         <section class="books-section" id="books">
-            <h2>مجموعة الكتب</h2>
+            <h2>جميع الكتب</h2>
             
-            <div class="books-container">
-           
+                <div class="books-container">
+             
                 <div class="book" data-category="روايات">
-                    <img src="  " alt="كتاب">
+                    <img src="image.jpg" alt=" كتاب واختفى كل شيء">
                     <h3>واختفى كل شيء</h3>
                     <p><strong>المؤلف:</strong> أجاثا كريستي</p>
-                    <p><strong>التصنيف:</strong> روايات</p>
-                    <button onclick="showDetails('كتاب 1')">عرض التفاصيل</button>
+                    <p><strong>القسم:</strong> روايات</p>
+                    <a class="read-link" href="https://foulabook.com/book/downloading/929357170" " target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('واختفى كل شيء')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('واختفى كل شيء')">عرض التفاصيل</button>
                 </div>
 
-                
                 <div class="book" data-category="روايات">
-                    <img src="  " alt="كتاب">
+                    <img src="image1.jpg" alt="ثلاثية غرناطة">
                     <h3>ثلاثية غرناطة</h3>
                     <p><strong>المؤلف:</strong> رضوى عاشور</p>
-                    <p><strong>التصنيف:</strong> روايات</p>
-                    <button onclick="showDetails('كتاب 2')">عرض التفاصيل</button>
+                    <p><strong>القسم:</strong> روايات</p>
+                    <a class="read-link" href="https://foulabook.com/book/downloading/823718500" " target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('ثلاثية غرناطة')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('ثلاثية غرناطة')">عرض التفاصيل</button>
                 </div>
 
-                
                 <div class="book" data-category="تنمية">
-                    <img src="  "  alt="كتاب">
+                    <img src="image2.jpg" alt=" كتاب عقدك النفسية سجنك الأبدي">
                     <h3>عقدك النفسية سجنك الأبدي</h3>
                     <p><strong>المؤلف:</strong> يوسف الحسني</p>
-                    <p><strong>التصنيف:</strong> تنمية بشرية</p>
-                    <button onclick="showDetails('كتاب 3')">عرض التفاصيل</button>
+                    <p><strong>القسم:</strong> تنمية بشرية</p>
+                    <a class="read-link" href="https://down.ketabpedia.com/files/ind/aaqduk-1.pdf" " target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('عقدك النفسية سجنك الأبدي')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('عقدك النفسية سجنك الأبدي')">عرض التفاصيل</button>
                 </div>
 
-               
                 <div class="book" data-category="تنمية">
-                    <img src="  " alt="كتاب">
+                    <img src="image3.jpg" alt=" كتاب متعة أن تكون في العشرين">
                     <h3>متعة أن تكون في العشرين</h3>
                     <p><strong>المؤلف:</strong> علا ديوب</p>
-                    <p><strong>التصنيف:</strong> تنمية بشرية</p>
-                    <button onclick="showDetails('كتاب 4')">عرض التفاصيل</button>
+                    <p><strong>القسم:</strong> تنمية بشرية</p>
+                    <a class="read-link" href="https://ketabpedia.com/wp-content/uploads/2025/03/%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D8%AA%D8%B9%D8%A9-%D8%A3%D9%86-%D8%AA%D9%83%D9%88%D9%86-%D9%81%D9%8A-%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D9%8A%D9%86.pdf" " target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('متعة أن تكون في العشرين')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('متعة أن تكون في العشرين')">عرض التفاصيل</button>
                 </div>
+
+                <div class="book" data-category="أدب">
+                    <img src="image4.jpg" alt="مكتبة ساحة الاعشاب">
+                    <h3>مكتبة ساحة الاعشاب</h3>
+                    <p><strong>المؤلف:</strong> ايريك دو كيرميل</p>
+                    <p><strong>القسم:</strong> أدب</p>
+                    <a class="read-link" href="https://www.kutub-pdf-ar.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D8%B1%D9%88%D8%A7%D9%8A%D8%A9-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%B3%D8%A7%D8%AD%D8%A9-%D8%A7%D9%84%D8%A3%D8%B9%D8%B4%D8%A7%D8%A8-pdf-%D8%A5%D9%8A%D8%B1%D9%8A%D9%83/#"" target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('مكتبة ساحة الاعشاب')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('مكتبة ساحة الاعشاب')">عرض  التفاصيل</button>
+                </div>
+
+                <div class="book" data-category="دينية">
+                    <img src="صحيح.webp" alt="صحيح البخاري">
+                    <h3>صحيح البخاري</h3>
+                    <p><strong>المؤلف:</strong> محمد بن إسماعيل البخاري</p>
+                    <p><strong>القسم:</strong> دينية</p>
+                    <a class="read-link" href=" https://foulabook.com/book/downloading/491803959" target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('صحيح البخاري')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('صحيح البخاري')">عرض التفاصيل</button>
+                </div>
+
+                <div class="book" data-category="روايات">
+                    <img src="هاري.webp" alt="Harry Potter">
+                    <h3>Harry Potter the Deathly</h3>
+                    <p><strong>المؤلف:</strong> JK Rowling</p>
+                    <p><strong>القسم:</strong> روايات</p>
+                    <a class="read-link" href=" https://www.alarabimag.com/download/19959-pdf" target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('Harry Potter')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('Harry Potter the deathly')">عرض التفاصيل</button>
+                </div>
+
+               <div class="book" data-category="دينية">
+                   <img src="الرحيق.webp" alt="الرحيق المختوم">
+                   <h3>الرحيق المختوم</h3>
+                   <p><strong>المؤلف:</strong> صفي الرحمن المباركفوري</p>
+                   <p><strong>القسم:</strong> دينية</p>
+                   <a class="read-link" href=" https://foulabook.com/book/downloading/780860114 " target="_blank">قراءة الكتاب</a>
+                  <button onclick="addToFavorites('الرحيق المختوم')" class="favorite-btn">
+                       ♡ أضف للمفضلة
+                  </button>
+                  <button onclick="showDetails('الرحيق المختوم')">عرض التفاصيل</button>
+              </div>
+
+              <div class="book" data-category="أدب">
+                    <img src="do.webp" alt=" الجريمة والعقاب">
+                    <h3>الجريمة والعقاب</h3>
+                    <p><strong>المؤلف:</strong> فيودور دوستويفسكي</p>
+                    <p><strong>القسم:</strong> أدب</p>
+                   <a class="read-link" href=" https://file.kutubypdf.com/s/4ZQ3mPZiCSiM8ip/download/SWEF2F6WEF5WE4F6EW5F6.pdf "target="_blank">قراءة الكتاب</a>
+                    <button onclick="addToFavorites('الجريمةوالعقاب')" class="favorite-btn">
+                        ♡ أضف للمفضلة
+                    </button>
+                    <button onclick="showDetails('الجريمة والعقاب')">عرض التفاصيل</button>
+                </div>
+
             </div>
         </section>
 
         <section class="categories-section" id="categories">
-            <h2>التصنيفات</h2>
+            <h2>الأقسام</h2>
             <div class="categories">
-                <button class="category-btn" onclick="filterBooks('all')">جميع 
-الكتب</button>
-                <button class="category-btn" onclick="filterBooks('
-روايات')">روايات</button>
-                <button class="category-btn" onclick="filterBooks('تنمية')">تنمية 
-بشرية</button>
-                <button class="category-btn" onclick="filterBooks('
-أدب')">أدب</button>
+                <button class="category-btn" onclick="filterBooks('all')">جميع الكتب</button>
+                <button class="category-btn" onclick="filterBooks('روايات')">روايات</button>
+                <button class="category-btn" onclick="filterBooks('تنمية')">تنمية بشرية</button>
+                <button class="category-btn" onclick="filterBooks('أدب')">أدب</button>
+               <button class="category-btn" onclick="filterBooks('دينية')">دينية</button>
+
+
             </div>
         </section>
     </main>
     
-
     <footer>
-        <p> مكتبة سترى النور</p>
-     
+        <p>مكتبة سترى النور &copy; 2025 | </p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
